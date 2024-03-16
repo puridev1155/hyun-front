@@ -77,7 +77,7 @@ export async function $larafetch<T, R extends ResponseType = "json">(
     const status = error.response?.status ?? -1;
 
     if (redirectIfNotAuthenticated && [401, 419].includes(status)) {
-      await router.push("/login");
+      await router.push("/admin/login");
     }
 
     if (redirectIfNotVerified && [409].includes(status)) {
@@ -152,7 +152,7 @@ export async function $fetcher<T, R extends ResponseType = "json">(
     const status = error.response?.status ?? -1;
 
     if (redirectIfNotAuthenticated && [401, 419].includes(status)) {
-      await router.push("/login");
+      await router.push("/admin/login");
     }
 
     if (redirectIfNotVerified && [409].includes(status)) {

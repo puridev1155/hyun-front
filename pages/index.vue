@@ -3,6 +3,6 @@
 
 <script setup>
 const router = useRouter();
-router.push("/login");
+router.push("/admin/login");
 </script>
 <style scoped></style>
